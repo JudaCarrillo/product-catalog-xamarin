@@ -10,7 +10,11 @@ namespace product_catalog_xamarin
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage())
+            {
+                BarBackgroundColor = Color.Transparent,
+                BackgroundColor = Color.FromHex("#1e1e1e"),
+            };
         }
 
         protected override void OnStart()
